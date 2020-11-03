@@ -1,0 +1,18 @@
+public class RecursionTemplate {
+
+    public RecursionTemplate(int level, int param) {
+        //recursion terminator
+        if (level > MAX_LEVEL) {
+            return;
+        }
+
+        //process current level logic
+        process(level, param);
+
+        //drill down
+        RecursionTemplate(level + 1, param);
+
+        //restore current status
+    }
+
+}
